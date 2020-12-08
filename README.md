@@ -1,24 +1,71 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column            | Type     | Options     |
+| ----------------- | -------- | ----------- |
+| last_name         | string   | null: false |
+| first_name        | string   | null: false |
+| last_name_kana    | string   | null: false |
+| first_name_kana   | string   | null: false |
+| gender_id         | integer  | null: false |
+| prefecture_id     | integer  | null: false |
+| city              | string   | ----------- |
+| profession_id     | integer  | null: false |
+| password          | string   | null: false |
+| nickname          | string   | null: false |
+| email             | string   | null: false |
+| birthday          | datetime | null: false |
+| age_id            | integer  | ----------- |
+| self_introduction | text     | ----------- |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :user_posts
+- has_many :posts, through: user_posts
+- has_many :messages
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+## posts テーブル
 
-* How to run the test suite
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| title   | string     | null: false                    |
+| details | text       | null: false                    |
+| user    | references | null: false, foreign_key: true |
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### Association
 
-* ...
+- has_many :user_posts
+- has_many :users, through: user_posts
+- has_many :messages
+
+
+
+## user_posts テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user    | references | null: false, foreign_key: true |
+| posts   | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :post
+- belongs_to :user
+
+
+
+## messages テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | string     |                                |
+| user    | references | null: false, foreign_key: true |
+| posts   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :post
+- belongs_to :user
