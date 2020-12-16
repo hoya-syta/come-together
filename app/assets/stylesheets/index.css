@@ -2,28 +2,28 @@
 /* ヘッダー */
 
 .header {
-  background-color: #1b91df;
-  margin-bottom: 48px;
-  padding: 20px 0;
+  background-color: #cbdff7;
+  margin-bottom: 40px;
+  padding: 10px 0;
 
 }
 .inner {
-  width: 1024px;
+  width: 100%;
   margin: 0 auto;
 }
 .nav {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
 }
 .logo {
-  width: 200px;
+  width: 25vw;
+  height: 15vh;
 }
 
 .title {
+  justify-content: start;
   text-align: center;
-  color: #fff;
-  font-size: 30px;
 }
 
 .nav__btn{
