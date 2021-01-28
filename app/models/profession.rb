@@ -1,4 +1,4 @@
-class DeliveryZone < ActiveHash::Base
+class Profession < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
     { id: 2, name: '公務員' },

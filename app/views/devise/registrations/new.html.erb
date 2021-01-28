@@ -57,22 +57,23 @@
         </div>
 
         <div class="field">
-          <%= f.label :age_id, "年齢" %><br />
+          年齢
+          <%= f.collection_select( :age_id, Age.all, :id, :name, {}, {class:"select-box", id:"age"}) %>
         </div>
 
         <div class="field">
-          <%= f.label :gender_id, "性別" %><br />
+          <%= f.collection_select :gender_id, "性別" %><br />
         </div>
 
         <div class="field">
         <p>お住まい</p>
-          <%= f.label :prefecture_id, "都道府県" %><br />
+          <%= f.collection_select :prefecture_id, "都道府県" %><br />
           <%= f.label :city, "住所" %><br />
           <%= f.text_area :city, id:"city" %>
         </div>
 
          <div class="field">
-          <%= f.label :profession_id, "職業" %><br />
+          <%= f.collection_select :profession_id, "職業" %><br />
 
         </div>
 
