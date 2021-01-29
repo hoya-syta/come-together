@@ -62,19 +62,21 @@
         </div>
 
         <div class="field">
-          <%= f.collection_select :gender_id, "性別" %><br />
+          性別
+          <%= f.collection_select( :gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"gender"}) %>
         </div>
 
         <div class="field">
         <p>お住まい</p>
-          <%= f.collection_select :prefecture_id, "都道府県" %><br />
+          都道府県
+          <%= f.collection_select( :prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
           <%= f.label :city, "住所" %><br />
           <%= f.text_area :city, id:"city" %>
         </div>
 
          <div class="field">
-          <%= f.collection_select :profession_id, "職業" %><br />
-
+          職業
+          <%= f.collection_select( :profession_id, Profession.all, :id, :name, {}, {class:"select-box", id:"profession"}) %>
         </div>
 
         <div class="field">
