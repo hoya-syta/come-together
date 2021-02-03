@@ -8,22 +8,22 @@
 
         <div class="field">
           <%= f.label :nickname, "ニックネーム" %><br />
-          <%= f.text_field :nickname, id:"nickname", placeholder:"例) レノン・マッカートニー" %>
+          <%= f.text_field :nickname, id:"nickname", class:"ip-box", placeholder:"例) レノン・マッカートニー" %>
         </div>
 
         <div class="field">
           <%= f.label :email, "メールアドレス" %><br />
-          <%= f.email_field :email, autofocus: true, id:"email", placeholder:"PC・携帯どちらでも可" %>
+          <%= f.email_field :email, autofocus: true, id:"email",  class:"ip-box", placeholder:"PC・携帯どちらでも可" %>
         </div>
 
         <div class="field">
           <%= f.label :password, "パスワード" %><br />
-          <%= f.password_field :password, id:"password", placeholder:"6文字以上" %>
+          <%= f.password_field :password, id:"password",  class:"ip-box", placeholder:"6文字以上" %>
         </div>
 
         <div class="field">
           <%= f.label :password_confirmation, "パスワード(確認)" %><br />
-          <%= f.password_field :password_confirmation, id:"password-confirmation", placeholder:"同じパスワードを入力して下さい"  %>
+          <%= f.password_field :password_confirmation, id:"password-confirmation",  class:"ip-box", placeholder:"同じパスワードを入力して下さい"  %>
         </div>
 
          <div class="field">
@@ -57,31 +57,31 @@
         </div>
 
         <div class="field">
-          年齢
+           <%= f.label :age, "年齢" %><br />
           <%= f.collection_select( :age_id, Age.all, :id, :name, {}, {class:"select-box", id:"age"}) %>
         </div>
 
         <div class="field">
-          性別
+           <%= f.label :gender, "性別" %><br />
           <%= f.collection_select( :gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"gender"}) %>
         </div>
 
         <div class="field">
         <p>お住まい</p>
-          都道府県
+         <%= f.label :prefecture, "都道府県" %><br />
           <%= f.collection_select( :prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
-          <%= f.label :city, "住所" %><br />
-          <%= f.text_area :city, id:"city" %>
+          <p><%= f.label :city, "住所" %><br /></p>
+          <%= f.text_area :city, id:"city", class:"ar-box", placeholder:"任意で記入。[注意] 市町村まで！プロフィール画面に反映されます！"%>
         </div>
 
          <div class="field">
-          職業
+           <%= f.label :profession, "職業" %><br />
           <%= f.collection_select( :profession_id, Profession.all, :id, :name, {}, {class:"select-box", id:"profession"}) %>
         </div>
 
         <div class="field">
           <%= f.label :self_introduction, "自己紹介" %><br />
-          <%= f.text_area :self_introduction, id:"self_introduction" %>
+          <%= f.text_area :self_introduction, id:"self_introduction", class:"ar-box", placeholder:"好きなアーティスト等ご自由に！"%>
         </div>
 
         
