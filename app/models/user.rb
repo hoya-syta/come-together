@@ -25,6 +25,14 @@ class User < ApplicationRecord
         validates :last_name_hurigana
         validates :first_name_hurigana
       end
+
+      with_options numericality: { other_than: 1 } do
+        validates :category_id
+        validates :status_id
+        validates :delivery_fee_id
+        validates :delivery_zone_id
+        validates :delivery_time_id
+      end
     end
 
 end
