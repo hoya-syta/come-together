@@ -22,17 +22,19 @@ class User < ApplicationRecord
       end
   
       with_options format: { with: /\A[ァ-ヶー－]+\z/ } do
-        validates :last_name_hurigana
-        validates :first_name_hurigana
+        validates :last_name_kana
+        validates :first_name_kana
       end
 
       with_options numericality: { other_than: 1 } do
-        validates :category_id
-        validates :status_id
-        validates :delivery_fee_id
-        validates :delivery_zone_id
-        validates :delivery_time_id
+        validates :age_id
+        validates :gender_id
+        validates :perfecture_id
+        validates :profession_id
       end
     end
+
+    has_many :posts
+    
 
 end
