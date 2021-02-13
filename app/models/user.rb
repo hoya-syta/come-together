@@ -29,7 +29,7 @@ class User < ApplicationRecord
       with_options numericality: { other_than: 1 } do
         validates :age_id
         validates :gender_id
-        validates :perfecture_id
+        validates :prefecture_id
         validates :profession_id
       end
     end

@@ -15,11 +15,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string   :city,               null: false
       t.integer  :profession_id,      null: false
       t.string   :nickname,           null: false
-      t.datetime :bairthday,          null: false
+      t.datetime :birthday,           null: false
       t.integer  :age_id,             null: false
       t.text     :self_introduction,  null: false
 
-      
 
 
       ## Recoverable

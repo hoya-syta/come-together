@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2020_12_17_094158) do
     t.string "city", null: false
     t.integer "profession_id", null: false
     t.string "nickname", null: false
-    t.datetime "bairthday", null: false
+    t.datetime "birthday", null: false
     t.integer "age_id", null: false
     t.text "self_introduction", null: false
     t.string "reset_password_token"
