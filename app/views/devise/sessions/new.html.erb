@@ -2,6 +2,14 @@
     <div class="form__wrapper">
       <h2 class="page-heading">💫ユーザーログイン💫</h2>
 
+       <%# ログイン時のエラーメッセージ  %>
+        <div class='login-flash-message' >
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+        </div>
+    
+      <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+
 
         <%# 「モデル名」にはUserモデルであれば@userを渡しましょう。%>
         <%# 「ログイン機能へのパス」は、devise導入後にrails routesを実行してdevise/sessions#createへのパスを確認し、記載してください。 %>
@@ -21,5 +29,6 @@
             <%= f.submit "ログイン", class: :form__btn  %>
           </div>
         <% end %>
+      <% end %>
   </div>
 </div>
