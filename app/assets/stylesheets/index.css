@@ -75,14 +75,18 @@ li {
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #87CEFA;
+  font-size: 1em;
+  color: #e67c1a;
   text-decoration: none;
   user-select: none;
+  border: 2px #db4b1f solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
 }
 
 .nav__logout:hover{
-  opacity: 0.5;
+  color: #fff;
+  background: #d1589f;
 }
 
 /* search */
