@@ -47,7 +47,7 @@
 | nickname          | string   | null: false |
 | email             | string   | null: false |
 | birthday          | datetime | null: false |
-| age_id            | integer  | ----------- |
+| age_id            | integer  | null: false |
 | self_introduction | text     | ----------- |
 
 ### Association
