@@ -1,0 +1,15 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+       birthday:   生年月日
+       last_name:  名字
+       first_name: 名前
+       last_name_kana: 名字カナ
+       first_name_kana: 名前カナ
+       age_id: 年齢
+       gender_id: 性別
+       prefecture_id: 都道府県
+       profession_id: 職業
+    
