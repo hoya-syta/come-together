@@ -56,7 +56,6 @@
 - has_many :posts, through: user_posts
 - has_many :messages
 
-リンゴ
 
 ## posts テーブル
 
