@@ -6,7 +6,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       ## Database authenticatable
       t.string   :email,              null: false, default: ""
       t.string   :encrypted_password, null: false, default: ""
-<<<<<<< Updated upstream
       t.string   :last_name,          null: false
       t.string   :first_name,         null: false
       t.string   :last_name_kana,     null: false
@@ -22,49 +21,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
 
 
 
-=======
-      t.string   :last_name,
-      t.string   :first_name,
-      t.string   :last_name_kana,
-      t.string   :first_name_kana,
-      t.integer  :gender_id,
-      t.integer  :
-      t.string   :
-      t.integer  :
-      t.string   :
-      t.string   :
-      t.string   : 
-      t.datetime :bairth_day,
-      t.integer  :
-      t.text     :
-      
-
-
-
-
-
-
-prefecture
-
-city
-
-profession
-
-password
-
-nickname
-
-mailadress
-
-
-
-
-age
-
-self_introduction
-
-
->>>>>>> Stashed changes
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
