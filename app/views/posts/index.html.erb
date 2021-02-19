@@ -6,12 +6,11 @@
          <%= link_to current_user.nickname ,  class: :greeting__link%> さん
       </div> 
     <% end %>
+    <%= link_to( new_post_path, class: 'purchase-btn') do %>
+        <span class='purchase-btn-text'>♪投稿する♪</span>
+    <% end %>
   </div>
   <div class="side-bar">
   </div>
 </div>
 
-<%= link_to( new_post_path, class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>出品する</span>
-  <%# <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %> %>
-<% end %>
