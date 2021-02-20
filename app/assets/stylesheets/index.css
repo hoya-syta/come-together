@@ -278,7 +278,7 @@ li {
 
 /* 投稿ボタン */
 
-.purchase-btn {
+.post-btn {
   width: 150px;
   background: #ce833c;
   text-align: center;
@@ -287,13 +287,19 @@ li {
   right: 270px;
   position:absolute;
   padding: 21px;
+  text-decoration: none;
 }
 
-.purchase-btn-text {
+.post-btn-text {
   color: rgb(145, 236, 150);
   display: block;
   font-size: 18px;
-  text-decoration: none;
   margin-bottom: 5px;
 }
 
+.post-btn:hover {
+  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  color: #fff;
+  background: #8b5815;
+}
