@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  before_action :set_prototype, except: [:index, :new, :create]
+  
+
 
   def index
   end
@@ -24,4 +27,8 @@ private
 
   def post_params
     params.require(:post).permit(:title, :detail, :image).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
