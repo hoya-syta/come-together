@@ -38,6 +38,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    render :show if current_user != @post.user
+    redirect_to root_path if @post.destroy
+  end
+
 
 end
 
