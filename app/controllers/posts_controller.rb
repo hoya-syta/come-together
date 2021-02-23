@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, except: [:index, :new, :create]
+  before_action :contributor_confirmation, only: [:edit, :update, :destroy]
+
   
 
 
@@ -25,6 +27,17 @@ class PostsController < ApplicationController
     # @messages = @post.messages
   end
 
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to post_path(@post)
+    else
+      render :edit
+    end
+  end
+
 
 end
 
@@ -37,4 +50,8 @@ private
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def contributor_confirmation
+    redirect_to root_path unless current_user == @post.user
   end
