@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_prototype, except: [:index, :new, :create]
+  before_action :set_post, except: [:index, :new, :create]
   
 
 
@@ -18,6 +18,11 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    # @message = Message.new
+    # @messages = @post.messages
   end
 
 

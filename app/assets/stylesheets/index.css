@@ -307,3 +307,84 @@ li {
   color: #fff;
   background: #8b5815;
 }
+
+
+/* 投稿記事ページ */
+
+.post__wrapper{
+  height: 78vh;
+}
+.post__hedding{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.post__user{
+  display: block;
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+  text-decoration: underline;
+}
+.post__image{
+  height: 10px;
+}
+.post__img{
+  padding: 20px 0;
+  width: 30vw;
+  height: 40vh;
+}
+.post__detail{
+  flex-direction: column;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.detail__title{
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.post__manage{
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+/* .post__btn{
+  display: block;
+  padding: 0.4em 1.6em;
+  font-size: 0.4em;
+  color: #999;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #999 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 0 4px;
+}
+.post__btn:hover{
+  color: #fff;
+  background: #999;
+} */
+
+.post__messages{
+  background-color: #f6f6f6;
+  padding: 20px;
+  margin: 28px 0 40px 0;
+}
+
+.messages_lists{
+  padding-left: 20px;
+}
+
+.messages_list{
+  list-style-type: square;
+  padding-bottom: 5px;
+}
+
+.message_user{
+  font-size: 16px;
+  color: #999;
+  text-decoration: underline;
+}

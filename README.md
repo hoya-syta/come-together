@@ -68,6 +68,7 @@
 
 ### Association
 
+- belongs_to :user
 - has_many :user_posts
 - has_many :users, through: user_posts
 - has_many :messages
