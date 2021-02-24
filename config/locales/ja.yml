@@ -12,4 +12,8 @@ ja:
        gender_id: 性別
        prefecture_id: 都道府県
        profession_id: 職業
-    
+     post:
+       title: タイトル
+       detail: 詳細
+       image: 画像
+       
