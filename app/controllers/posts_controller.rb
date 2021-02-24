@@ -23,8 +23,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    # @message = Message.new
-    # @messages = @post.messages
+    @message = Message.new
+    @messages = @post.messages
   end
 
   def edit
