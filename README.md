@@ -57,18 +57,18 @@
 - has_many :messages
 
 
-
 ## posts テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | title   | string     | null: false                    |
-| details | text       | null: false                    |
+| detail  | text       | null: false                    |
 | user    | references | null: false, foreign_key: true |
 
 
 ### Association
 
+- belongs_to :user
 - has_many :user_posts
 - has_many :users, through: user_posts
 - has_many :messages
@@ -80,7 +80,7 @@
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | user    | references | null: false, foreign_key: true |
-| posts   | references | null: false, foreign_key: true |
+| post    | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :post
@@ -94,7 +94,7 @@
 | ------- | ---------- | ------------------------------ |
 | content | string     |                                |
 | user    | references | null: false, foreign_key: true |
-| posts   | references | null: false, foreign_key: true |
+| post    | references | null: false, foreign_key: true |
 
 ### Association
 

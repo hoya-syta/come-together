@@ -1,6 +1,18 @@
 <div class="wrapper">
   <div class="chat">
+    <% if user_signed_in? %>
+      <div class="greeting"> 
+        ようこそ！<%= link_to "#{current_user.nickname}", class: :greeting__link%> さん
+      </div> 
+    <% end %>
+    <div class="card__wrapper">
+      <%= render partial: 'post', collection: @posts %>
+    </div>
+    <%= link_to( new_post_path, class: 'post-btn') do %>
+        <span class='post-btn-text'>♪投稿する♪</span>
+    <% end %>
   </div>
   <div class="side-bar">
   </div>
 </div>
+
