@@ -381,17 +381,22 @@ li {
 
 .messages_lists{
   padding-left: 20px;
+  background-color: #87CEFA;
+  border-radius: 20px;
+  width: 90%;
 }
 
 .messages_list{
-  list-style-type: square;
+  list-style-type: none;
   padding-bottom: 5px;
+
 }
 
 .message_user{
   font-size: 16px;
-   background-color: #999;
+   background-color: rgb(93, 201, 98);
   text-decoration: underline;
+  border-radius: 40px;
 }
 
 .m_field{
