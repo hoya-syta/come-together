@@ -1,0 +1,45 @@
+
+  
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}さんの情報"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">ニックネーム</th>
+            <td class="table__col2"><%= @user.nickname %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">性別</th>
+            <td class="table__col2"><%= @user.gender.name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">誕生日</th>
+            <td class="table__col2"><%= @user.birthday.strftime("%Y年%m月%d日") %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">年齢</th>
+            <td class="table__col2"><%= @user.age.name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">お住まい</th>
+            <td class="table__col2"><%= @user.prefecture.name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">職業</th>
+            <td class="table__col2"><%= @user.profession.name	 %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">自己紹介</th>
+            <td class="table__col2"><%= @user.self_introduction	 %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}さんの投稿"%>
+      </h2>
+      <div class="card__wrapper">
+        <%= render partial: 'posts/post', collection: @user.posts %>
+      </div>
+    </div>

@@ -3,7 +3,7 @@
       <p class="post__hedding">
         <%= @post.title %>
       </p>
-      <%= link_to "by #{@post.user.nickname}", root_path(@post.user), class: :post__user %>
+      <%= link_to "by #{@post.user.nickname}", user_path(@post.user), class: :post__user %>
       <% if current_user == @post.user%>
         <div class="post__manage">
           <%= link_to "編集をする", edit_post_path(@post), class: :post__btn %>
@@ -49,7 +49,7 @@
             <% @messages.each do |message| %>
               <li class="messages_list">
                 <%= message.content %> 
-                <%= link_to "[ #{message.user.nickname} ]", root_path(message.user), class: :message_user %>
+                <%= link_to "[ #{message.user.nickname} ]", user_path(message.user), class: :message_user %>
               </li>
            <% end %>
           </ul> 

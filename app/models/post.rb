@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
 
   validates :title,         presence: true
   validates :detail,        presence: true

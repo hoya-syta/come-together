@@ -2,7 +2,7 @@
   <div class="chat">
     <% if user_signed_in? %>
       <div class="greeting"> 
-        ようこそ！<%= link_to "#{current_user.nickname}", class: :greeting__link%> さん
+        ようこそ！<%= link_to "#{current_user.nickname}", user_path(current_user), class: :greeting__link%> さん
       </div> 
     <% end %>
     <div class="card__wrapper">
