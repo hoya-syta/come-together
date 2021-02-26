@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
 
   def index
-    @posts = Post.all
+    @posts = Post.includes(:user)
   end
   
   def new
@@ -23,8 +23,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    # @message = Message.new
-    # @messages = @post.messages
+    @message = Message.new
+    @messages = @post.messages
   end
 
   def edit

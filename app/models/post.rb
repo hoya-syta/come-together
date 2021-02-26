@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
 
   validates :title,         presence: true
   validates :detail,        presence: true
@@ -8,4 +9,5 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :users, through: :user_posts
   has_one_attached :image
+  has_many :messages, dependent: :destroy
 end

@@ -126,6 +126,7 @@ li {
 .footer {
   background-color: rgb(204, 75, 75);
   padding: 10px 0;
+  margin-top: 30px;
 }
 .copyright {
   text-align: center;
@@ -174,7 +175,7 @@ li {
 }
 
 .form__wrapper{
-  min-height: calc(100vh - 161px);
+  min-height: calc(100vh - 191px);
   padding-left: 15vw;
   width: 100%;
   background-color: #dde4e9;
@@ -235,7 +236,9 @@ li {
 /* メイン */
 
 .greeting{
-  margin-bottom: 10px;
+  margin-top: 10px ;
+  font-size: large;
+  color: #ad6262;
 }
 .greeting__link{
   text-decoration: underline;
@@ -264,9 +267,10 @@ li {
 
 .card__title {
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 8px;
   font-weight: bold;
+  color: #4d6164;
 }
 .card__summary {
   font-size: 12px;
@@ -312,7 +316,7 @@ li {
 /* 投稿記事ページ */
 
 .post__wrapper{
-  height: 78vh;
+  min-height: 100%;
   background-color: #e6eca8;
 }
 .post__hedding{
@@ -371,22 +375,70 @@ li {
 }
 
 .post__messages{
-  background-color: #f6f6f6;
-  padding: 20px;
-  margin: 28px 0 40px 0;
+  background-color: #f0eeee;
+  padding: 15px;
+  border-radius: 40px;
+  display: block;
+  text-align: center;
 }
 
 .messages_lists{
   padding-left: 20px;
+  background-color: #a1d7f8;
+  border-radius: 20px;
+  width: 90%;
 }
 
 .messages_list{
-  list-style-type: square;
+  list-style-type: none;
   padding-bottom: 5px;
+
 }
 
 .message_user{
   font-size: 16px;
-   background-color: #999;
+   background-color: rgb(229, 240, 229);
   text-decoration: underline;
+  border-radius: 40px;
+}
+
+.m_field{
+  font-size: 20px;
+}
+
+
+
+/* ユーザーページ */
+.user__wrapper{
+  min-height: 100%;
+  background-color: #e6eca8;
+}
+.table{
+  border-collapse: collapse;
+  margin-bottom: 22px;
+  margin-left: 10px;
+  width: 60%;
+}
+.table__col1{
+  text-align: left;
+  font-weight: bold;
+  background: #d3d0d0;
+  border-collapse: collapse;
+  border: 1px solid #f5f5f5;
+  width: 30%;
+  padding: 8px;
+}
+.table__col2{
+  text-align: left;
+  border: 1px solid #f5f5f5;
+  border-collapse: collapse;
+  background: #e8e2fc;
+  width: 70%;
+  padding: 16px 8px;
+}
+.user__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
