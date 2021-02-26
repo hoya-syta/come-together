@@ -236,7 +236,9 @@ li {
 /* メイン */
 
 .greeting{
-  margin-bottom: 10px;
+  margin-top: 10px ;
+  font-size: large;
+  color: #ad6262;
 }
 .greeting__link{
   text-decoration: underline;
@@ -265,9 +267,10 @@ li {
 
 .card__title {
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 8px;
   font-weight: bold;
+  color: #4d6164;
 }
 .card__summary {
   font-size: 12px;
@@ -394,7 +397,7 @@ li {
 
 .message_user{
   font-size: 16px;
-   background-color: rgb(93, 201, 98);
+   background-color: rgb(229, 240, 229);
   text-decoration: underline;
   border-radius: 40px;
 }
@@ -408,16 +411,18 @@ li {
 /* ユーザーページ */
 .user__wrapper{
   min-height: 100%;
+  background-color: #e6eca8;
 }
 .table{
   border-collapse: collapse;
-  margin-bottom: 32px;
-  width: 50%;
+  margin-bottom: 22px;
+  margin-left: 10px;
+  width: 60%;
 }
 .table__col1{
   text-align: left;
   font-weight: bold;
-  background: #fafafa;
+  background: #d3d0d0;
   border-collapse: collapse;
   border: 1px solid #f5f5f5;
   width: 30%;
@@ -427,6 +432,7 @@ li {
   text-align: left;
   border: 1px solid #f5f5f5;
   border-collapse: collapse;
+  background: #e8e2fc;
   width: 70%;
   padding: 16px 8px;
 }
