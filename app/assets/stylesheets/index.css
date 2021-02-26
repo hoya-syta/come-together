@@ -239,6 +239,12 @@ li {
   margin-top: 10px ;
   font-size: large;
   color: #ad6262;
+  background-color: rgb(228, 238, 247);
+  width: 50%;
+  height: 30px;
+  border-radius: 30px;
+  display: block;
+  text-align: center;
 }
 .greeting__link{
   text-decoration: underline;
@@ -397,9 +403,8 @@ li {
 
 .message_user{
   font-size: 16px;
-   background-color: rgb(229, 240, 229);
   text-decoration: underline;
-  border-radius: 40px;
+  color: #5a676b;
 }
 
 .m_field{
