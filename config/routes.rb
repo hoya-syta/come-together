@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   resources :posts do
     resources :messages
+    collection do
+      get 'search'
+    end
   end
 
   resources :users

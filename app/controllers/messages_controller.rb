@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
       else
         @post = @message.post
         @messages = @post.messages
-        render "post/show"
+        render :'posts/show'
       end
     end
   
@@ -15,4 +15,4 @@ class MessagesController < ApplicationController
     def message_params
       params.require(:message).permit(:content).merge(user_id: current_user.id, post_id: params[:post_id])
     end
-  end
+end

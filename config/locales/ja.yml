@@ -16,4 +16,5 @@ ja:
        title: タイトル
        detail: 詳細
        image: 画像
-       
+     message:
+       content: メッセージ

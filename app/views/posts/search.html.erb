@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="chat">
+   <%= form_with(url: search_posts_path, local: true, method: :get) do |form| %><% end %>
+  <div class="greeting"> 
+        検索結果
+      </div> 
+        <div class="card__wrapper">
+          <% @posts.each do |post| %>
+            <%= render partial: "post", locals: { post: post } %>
+          <% end %>
+        </div>
+  </div>
+      <div class="side-bar">
+      
+      </div>
+</div>
+
+
+

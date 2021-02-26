@@ -10,4 +10,13 @@ class Post < ApplicationRecord
   has_many :users, through: :user_posts
   has_one_attached :image
   has_many :messages, dependent: :destroy
+
+  def self.search(search)
+    if search != ""
+      Post.where('title LIKE(?)', "%#{search}%")
+      Post.where('detail LIKE(?)', "%#{search}%")
+    else
+      Post.all
+    end
+  end
 end
