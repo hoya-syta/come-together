@@ -36,6 +36,7 @@
       <div class="post__messages">
          <% if user_signed_in?%>
           <%= form_with model: [@post, @message], local: true do |f|%>
+          <%= render 'posts/error_messages', model: f.object %>
             <div class="field">
                 <div class="massage_p"><%= f.label :content, "メッセージ", class: :m_field %></div><br>
                 <%= f.text_area :content, class:"ar-box" %>

@@ -1,10 +1,8 @@
 class PostsController < ApplicationController
-  before_action :set_post, except: [:index, :new, :create]
+  before_action :set_post, except: [:index, :new, :create, :search]
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
   
-
-
   def index
     @posts = Post.includes(:user)
   end
@@ -43,11 +41,15 @@ class PostsController < ApplicationController
     redirect_to root_path if @post.destroy
   end
 
+  def search
+    @posts = Post.search(params[:keyword])
+  end
 
-end
 
 
-private
+
+
+  private
 
   def post_params
     params.require(:post).permit(:title, :detail, :image).merge(user_id: current_user.id)
@@ -60,3 +62,4 @@ private
   def contributor_confirmation
     redirect_to root_path unless current_user == @post.user
   end
+end
