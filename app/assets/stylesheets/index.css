@@ -93,14 +93,15 @@ li {
 /* search */
 
 .search-form {
-  width: 35vw;
+  width: 20vw;
   height: 5vh;
   display: flex;
   margin-top: 5vh;
+  margin-left: 10px;
 }
 
 .search-form>.input-box {
-  width: 100%;
+  width: 80%;
   height: 5vh;
   padding-left: 10px;
 }
@@ -147,6 +148,8 @@ li {
   margin-right: 10px;
   margin-left: 10px;
   border-radius: 10px;
+  display: block;
+  align-items: center;
   
 }
 .chat {

@@ -17,14 +17,7 @@
             <%= link_to image_tag("CT_logo.png", class: :logo), root_path %> 
           </div>
 
-          <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |f| %>
-          <%= f.text_field :keyword, placeholder: "投稿を探す!", class: "input-box" %>
-            <button class="search-button">
-              <%= image_tag "search.jpg", class:"search-icon" %>
-            </button>
-          <% end %>
-
-          <% if user_signed_in? %>
+         <% if user_signed_in? %>
                 <div class="nav__right">
                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: :nav__logout %>
                 </div>
@@ -34,7 +27,7 @@
                   <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %> 
                 </div>
             <% end %>  
-       </div>
+         
     </header>
 
     <%= yield %>
