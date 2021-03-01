@@ -12,12 +12,12 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string   :first_name_kana,    null: false
       t.integer  :gender_id,          null: false
       t.integer  :prefecture_id,      null: false
-      t.string   :city,               null: false
+      t.string   :city,               null: true
       t.integer  :profession_id,      null: false
       t.string   :nickname,           null: false
       t.datetime :birthday,           null: false
       t.integer  :age_id,             null: false
-      t.text     :self_introduction,  null: false
+      t.text     :self_introduction,  null: true
 
 
 

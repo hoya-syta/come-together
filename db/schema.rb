@@ -70,12 +70,12 @@ ActiveRecord::Schema.define(version: 2021_02_24_064019) do
     t.string "first_name_kana", null: false
     t.integer "gender_id", null: false
     t.integer "prefecture_id", null: false
-    t.string "city", null: false
+    t.string "city"
     t.integer "profession_id", null: false
     t.string "nickname", null: false
     t.datetime "birthday", null: false
     t.integer "age_id", null: false
-    t.text "self_introduction", null: false
+    t.text "self_introduction"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
