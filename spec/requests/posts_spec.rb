@@ -23,4 +23,20 @@ describe PostsController, type: :request do
       expect(response.body).to include('♪投稿する♪')
     end
   end
+
+  describe 'GET #show' do
+    it 'showアクションにリクエストすると正常にレスポンスが返ってくる' do 
+      get root_path
+      expect(response.status).to eq 200
+    end
+    it 'showアクションにリクエストするとレスポンスに投稿済みの記事のタイトルが存在する' do 
+      get root_path
+      expect(response.body).to include(@post.title)
+    end
+    it 'showアクションにリクエストするとレスポンスに投稿済みの記事の詳細が存在する' do 
+      get root_path
+      expect(response.body).to include(@post.detail)
+    end
+  end 
+
 end
