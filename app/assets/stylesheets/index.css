@@ -397,6 +397,18 @@ li {
   transition: 0.4s ease;
   margin: 0 4px;
 }
+.post_d_btn{
+  display: block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #999;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #999 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 0 4px;
+}
 .post__btn:hover{
   color: #fff;
   background: #999;

@@ -51,7 +51,7 @@ RSpec.describe '新規投稿', type: :system do
         @post2 = FactoryBot.create(:post)
       end
       context '投稿記事編集ができるとき' do
-        it 'ログインしたユーザーは自分が投稿したツイートの編集ができる' do
+        it 'ログインしたユーザーは自分が投稿した記事の編集ができる' do
           # 記事1を投稿したユーザーでログインする
           visit new_user_session_path
           fill_in 'user_email', with: @post1.user.email
@@ -102,3 +102,57 @@ RSpec.describe '新規投稿', type: :system do
         end
       end
     end
+
+    RSpec.describe '投稿記事削除', type: :system do
+      before do
+        @post1 = FactoryBot.create(:post)
+        @post2 = FactoryBot.create(:post)
+      end
+      context '投稿記事の削除ができるとき' do
+        it 'ログインしたユーザーは自らが投稿した記事の削除ができる' do
+          # 記事1を投稿したユーザーでログインする
+          visit new_user_session_path
+          fill_in 'user_email', with: @post1.user.email
+          fill_in 'user_password', with: @post1.user.password
+          find('input[name="commit"]').click
+          expect(current_path).to eq(root_path)
+          # post1の投稿が存在することを確認する
+          expect(page).to have_content(@post1.title)
+          # 詳細ページへ遷移する
+          visit post_path(@post1)
+          # 詳細ページにDeleteボタンがあることを確認する
+          expect(page).to have_content('削除をする')
+          # 投稿を削除するとレコードの数が1減ることを確認する
+          expect{
+           find('a[class="post_d_btn"]').click
+          }.to change { Post.count }.by(-1)
+          # トップページに遷移する
+          visit root_path
+          # トップページには記事1の内容が存在しないことを確認する
+          expect(page).to have_content("#{@post1.title}")
+      end
+    end
+
+      context '投稿記事の削除ができないとき' do
+        it 'ログインしたユーザーは自分以外が投稿した記事の削除ができない' do
+          # 記事1を投稿したユーザーでログインする
+          visit new_user_session_path
+          fill_in 'user_email', with: @post1.user.email
+          fill_in 'user_password', with: @post1.user.password
+          find('input[name="commit"]').click
+          # 詳細ページに移動する
+          visit post_path(@post2)
+          # 記事２の詳細ページに削除ボタンがないことを確認する
+          expect(page).to have_no_content('削除をする')
+        end
+
+        it 'ログインしていないとツイートの削除ボタンがない' do
+          # トップページにいる
+          visit root_path
+          # 詳細ページに移動する
+          visit post_path(@post1)
+         # 詳細ページに削除ボタンがないことを確認する
+         expect(page).to have_no_content('削除をする')
+        end
+      end
+  end
