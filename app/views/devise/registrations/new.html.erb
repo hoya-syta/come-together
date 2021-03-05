@@ -74,7 +74,7 @@
             <%= f.label :prefecture, "・都道府県" %><br />
               <%= f.collection_select( :prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
               <p><%= f.label :city, "・住所" %><br /></p>
-              <%= f.text_area :city, id:"city", class:"ar-box", placeholder:"任意で記入。[注意] 市町村まで！記載された情報はプロフィール画面に反映されます！"%>
+              <%= f.text_area :city, id:"city", class:"ar-box", placeholder:"任意で記入。"%>
             </div>
 
             <div class="field">

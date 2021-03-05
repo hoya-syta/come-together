@@ -16,7 +16,7 @@ RSpec.describe "Messages", type: :system do
     visit post_path(@post)
     # フォームに情報を入力する
     fill_in 'message_content', with: @message
-    # コメントを送信すると、Commentモデルのカウントが1上がることを確認する
+    # メッセージを送信すると、Messageモデルのカウントが1上がることを確認する
     expect{
       find('input[name="commit"]').click
     }.to change { Message.count }.by(1)

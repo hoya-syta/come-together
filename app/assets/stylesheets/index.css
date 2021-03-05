@@ -360,14 +360,13 @@ li {
   text-align: center;
   text-decoration: underline;
 }
-.post__image{
-  height: 10px;
-}
+
 .post__img{
   padding: 20px 0;
-  width: 30vw;
-  height: 40vh;
+  width: 50%;
+  height: 30%;
 }
+
 .post__detail{
   flex-direction: column;
   margin-bottom: 8px;

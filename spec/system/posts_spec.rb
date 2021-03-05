@@ -22,15 +22,15 @@ RSpec.describe '新規投稿', type: :system do
         fill_in 'post_detail', with: @post.detail
         image_path = Rails.root.join("public/images/test_image.png")
         attach_file('post[image]', image_path, make_visible: true)
-        # 送信するとTweetモデルのカウントが1上がることを確認する
+        # 送信するとPostモデルのカウントが1上がることを確認する
         expect{
           find('input[name="commit"]').click
         }.to change { Post.count }.by(1)
         # トップページに遷移する
         visit root_path
-        # トップページには先ほど投稿した内容のツイートが存在することを確認する（画像）
+        # トップページには先ほど投稿した内容の記事が存在することを確認する（画像）
         expect(page).to have_selector("img[src$='test_image.png']")
-        # トップページには先ほど投稿した内容のツイートが存在することを確認する（テキスト）
+        # トップページには先ほど投稿した内容の記事が存在することを確認する（テキスト）
         expect(page).to have_content(@post.title)
       end
     end
@@ -96,7 +96,7 @@ RSpec.describe '新規投稿', type: :system do
         it 'ログインしていないと記事の編集画面には遷移できない' do
           # トップページにいる
           visit root_path
-          # share1,share2へのリンクがないことを確認する
+          # post1,post2へのリンクがないことを確認する
           expect(page).to have_no_link nil, href: edit_post_path(@post1)
           expect(page).to have_no_link nil, href: edit_post_path(@post2)
         end
@@ -120,7 +120,7 @@ RSpec.describe '新規投稿', type: :system do
           expect(page).to have_content(@post1.title)
           # 詳細ページへ遷移する
           visit post_path(@post1)
-          # 詳細ページにDeleteボタンがあることを確認する
+          # 詳細ページに削除ボタンがあることを確認する
           expect(page).to have_content('削除をする')
           # 投稿を削除するとレコードの数が1減ることを確認する
           expect{
