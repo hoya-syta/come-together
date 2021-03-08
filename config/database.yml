@@ -50,5 +50,9 @@ test:
 production:
   <<: *default
   database: come_together_production
-  username: come_together
-  password: <%= ENV['COME_TOGETHER_DATABASE_PASSWORD'] %>
+  # username: come_together
+  # password: <%= ENV['COME_TOGETHER_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
+
