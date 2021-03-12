@@ -1,7 +1,7 @@
 # アプリケーション名
 
 ## Come Together
-![CT_logo.png](https://gyazo.com/0c607987fd5956c2e63a206ebded14eb "top_page")
+!(https://gyazo.com/0c607987fd5956c2e63a206ebded14eb "top_page")
 
 
 # アプリケーション概要
