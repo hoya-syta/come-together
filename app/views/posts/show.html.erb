@@ -42,14 +42,14 @@
             </div>
           <% end %>
         <% end %>
-         <ul class="messages_lists">
+         <div class="messages_lists">
             <% @messages.each do |message| %>
               <li class="messages_list">
                 <%= message.content %> 
                 <%= link_to "by : [ #{message.user.nickname} ]", user_path(message.user), class: :message_user %>
               </li>
            <% end %>
-          </ul> 
+          </div> 
       </div>
     </div>
 
